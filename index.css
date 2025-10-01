@@ -90,3 +90,19 @@
 
  /*Medidas*/
  /*medeia para compu*/
+/*medeia para compu*/
+
+@media (max-width: 1440px) {
+  .button {
+    margin: 15px auto;
+    max-width: 250px;
+  }
+  
+  .button a {
+    padding: 10px 20px;
+  }
+  
+     .titulos {
+      position: fixed;
+    }
+}
