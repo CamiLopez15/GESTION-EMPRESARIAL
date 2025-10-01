@@ -68,7 +68,7 @@
 .Titulos {
   position: relative;
   z-index: 10;  /* Asegura que esté arriba */
-  background: rgba(172, 102, 162, 0.466);
+  background: rgba(91, 43, 167, 0.548);
   padding: 20px 40px;
   border-radius: 8px;
   text-align: center;
