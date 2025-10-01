@@ -1,4 +1,3 @@
-
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -8,88 +7,87 @@
     opacity: 1;
     transform: translateY(0);
   }
-}.button{
-  position:relative;
-  display:inline-block;
-  margin:20px;
+}
+/*Botones*/
+.button {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
 }
 
-.button a{
-  color:white;
-  font-family:Helvetica, sans-serif;
-  font-weight:bold;
-  font-size:36px;
+.button a {
+  color: white;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 36px;
   text-align: center;
-  text-decoration:none;
-  background-color:#FB2576;
-  display:block;
-  position:relative;
-  padding:20px 40px;
+  text-decoration: none;
+  background-color: #fb2576;
+  display: block;
+  position: relative;
+  padding: 20px 40px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   text-shadow: 0px 1px 0px #000;
   filter: dropshadow(color=#000, offx=0px, offy=1px);
-  
-  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #f555d2;
-  -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #f555d2;
-  box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #f555d2;
-  
+
+  -webkit-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #f555d2;
+  -moz-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #f555d2;
+  box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #f555d2;
+
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
 
-.button a:active{
-  top:10px;
-  background-color:#332FD0;
-  
-  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #002cbb;
-  -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #002cbb;
-  box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #002cbb;
+.button a:active {
+  top: 10px;
+  background-color: #332fd0;
+
+  -webkit-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #002cbb;
+  -moz-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3pxpx 0 #002cbb;
+  box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #002cbb;
 }
 
-.button:after{
-  content:"";
-  height:100%;
-  width:100%;
-  padding:4px;
+.button:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  padding: 4px;
   position: absolute;
-  bottom:-15px;
-  left:-4px;
-  z-index:-1;
-  background-color:#2B1800;
+  bottom: -15px;
+  left: -4px;
+  z-index: -1;
+  background-color: #2b1800;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-
 
 /**Contenedor titulos*/
-    /* Caja de bienvenida sobre el efecto */
-    .titulos {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: #3e007128;
-      color: #FB2576;
-      font-family: monospace;
-      text-align: center;
-      padding: 20px 40px;
-      border: 2px solid #FB2576;
-      border-radius: 8px;
-      z-index: 10;
-      font-size: 50px;
-    }
+/* Caja de bienvenida sobre el efecto */
+.titulos {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #3e007128;
+  color: #fb2576;
+  font-family: monospace;
+  text-align: center;
+  padding: 20px 40px;
+  border: 2px solid #fb2576;
+  border-radius: 8px;
+  z-index: 10;
+  font-size: 50px;
+   backdrop-filter: blur(10px);
+}
 
-    
 /*colors 1 Morado 3F0071
  colors 2 Rosado  FB2576
  COLOR 3 AZUL CLARO 332FD0
  COLOR 4 AZUL OSCURO 0002A1  */
 
-
- /*Medidas*/
- /*medeia para compu*/
+/*Medidas*/
 /*medeia para compu*/
 
 @media (max-width: 1440px) {
@@ -97,12 +95,12 @@
     margin: 15px auto;
     max-width: 250px;
   }
-  
+
   .button a {
     padding: 10px 20px;
   }
-  
-     .titulos {
-      position: fixed;
-    }
+
+  .titulos {
+    position: fixed;
+  }
 }
