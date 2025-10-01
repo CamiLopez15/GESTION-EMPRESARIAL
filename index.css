@@ -64,12 +64,25 @@
 
 
 /**Contenedor titulos*/
+    /* Caja de bienvenida sobre el efecto */
+    .titulos {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #3e007128;
+      color: #FB2576;
+      font-family: monospace;
+      text-align: center;
+      padding: 20px 40px;
+      border: 2px solid #FB2576;
+      border-radius: 8px;
+      z-index: 10;
+      font-size: 50px;
+    }
 
-.Titulos {
-  position: relative;
-  z-index: 10;  /* Asegura que esté arriba */
-  background: rgba(91, 43, 167, 0.548);
-  padding: 20px 40px;
-  border-radius: 8px;
-  text-align: center;
-}
+    
+/*colors 1 Morado 3F0071
+ colors 2 Rosado  FB2576
+ COLOR 3 AZUL CLARO 332FD0
+ COLOR 4 AZUL OSCURO 0002A1  */
