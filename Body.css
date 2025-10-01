@@ -1,0 +1,80 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family:Helvetica, sans-serif;
+  background: linear-gradient(#0002A1 25%, #a2cef4 50%, #a2cef4 50%, #3F0071 100%);
+}
+
+h1 {
+  font-size: 50px;
+  color: #2d3748;
+  margin-bottom: 40px;
+  animation: fadeInUp 2s ease;
+}
+
+
+/*Fondo*/
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0 auto;
+  perspective: 360px;
+  perspective-origin: 50% 50%;
+}
+
+.top-plane, .bottom-plane {
+  width: 200%;
+  height: 130%;
+  position: absolute;
+  bottom: -30%;
+  left: -50%;
+  background-image: -webkit-linear-gradient(#a2cef4 2px, transparent 2px), -webkit-linear-gradient(left, #a2cef4 2px, transparent 2px);
+  background-size: 100px 100px,100px 100px;
+  background-position: -1px -1px,-1px -1px;
+  transform: rotateX(80deg);
+  animation: planeMoveTop 5s infinite linear;
+  
+}
+
+.bottom-plane {
+  transform: rotateX(-85deg);
+  top: -30%;
+  animation: planeMoveBot 5s infinite linear;
+}
+
+@keyframes planeMoveTop {
+  from {
+    background-position: 0px -200px,0px 0px;
+  }
+  to {
+    background-position: 0px 0px, 200px 0px;
+  }
+}
+@keyframes planeMoveBot {
+  from {
+    background-position: 0px 0px,0px 0px;
+  }
+  to {
+    background-position: 0px -100px, 100px 0px;
+  }
+}
+@media (max-height: 350px) {
+  .wrap {
+    perspective: 210px;
+  }
+}
+/*colors 1 Morado 3F0071
+ colors 2 Rosado  FB2576
+ COLOR 3 AZUL CLARO 332FD0
+ COLOR 4 AZUL OSCURO 0002A1  */
