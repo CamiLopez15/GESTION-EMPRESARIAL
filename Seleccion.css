@@ -45,7 +45,7 @@
   background-color: #332fd0;
 
   -webkit-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #002cbb;
-  -moz-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3pxpx 0 #002cbb;
+  -moz-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #002cbb;
   box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #002cbb;
 }
 
@@ -78,7 +78,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
   max-width: 350px;
 }
 
@@ -88,7 +87,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .image-container img {
@@ -97,9 +95,7 @@
   object-fit: cover;
 }
 
-
 /**Contenedor titulos*/
-/* Caja de bienvenida sobre el efecto */
 .titulos {
   position: absolute;
   top: 50%;
@@ -114,7 +110,7 @@
   border-radius: 8px;
   z-index: 10;
   font-size: 10px;
-   backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 /*medeia para compu*/
@@ -144,20 +140,20 @@
     font-size: 50px;
   }
 
-.content-container {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  gap: 200px;
-  width: 100%;
-  justify-content: center;
-}
-.image-container img {
-  width: 300px;
-  height: 400px;
-  object-fit: cover;
-}
+  .content-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 200px;
+    width: 100%;
+    justify-content: center;
+  }
 
+  .image-container img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+  }
 }
 
 /*medeia para compu*/
@@ -186,35 +182,37 @@
     z-index: 10;
     font-size: 50px;
   }
+
   .image-container img {
-  width: 300px;
-  height: 400px;
-  object-fit: cover;
-}
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+  }
 
+  .content-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 200px;
+    width: 100%;
+    justify-content: center;
+  }
 }
-.content-container {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  gap: 200px;
-  width: 100%;
-  justify-content: center;
-}
-
 
 /* Media Queries para tablets */
 @media (max-width: 768px) {
   .button {
     margin: 15px auto;
-    max-width: 250px;
+    max-width: 220px;
   }
 
   .button a {
+    font-size: 16px;
     padding: 10px 20px;
   }
 
   .titulos {
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -222,27 +220,150 @@
     color: #fb2576;
     font-family: monospace;
     text-align: center;
-    padding: 90px 20px;
+    padding: 60px 40px;
     border: 2px solid #fb2576;
     border-radius: 8px;
     z-index: 10;
-    font-size: 50px;
+    font-size: 32px;
+    width: 85%;
+    max-width: 500px;
+    backdrop-filter: blur(10px);
   }
 
-    .image-container img {
-  width: 200px;
-  height: 300px;
-  object-fit: cover;
+  .image-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .image-container img {
+    width: 180px;
+    height: 280px;
+    object-fit: cover;
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    justify-content: center;
+    padding: 20px 10px;
+  }
+
+  .column {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
-.content-container {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  gap: 90px;
-  width: 100%;
-  justify-content: center;
-}
+/* Media Queries para celulares grandes */
+@media (max-width: 480px) {
+  .button {
+    margin: 10px auto;
+    max-width: 90%;
+  }
+
+  .button a {
+    font-size: 18px;
+    padding: 12px 25px;
+    -webkit-box-shadow: inset 0 1px 0 #ffe5c4, 0 6px 0 #f555d2;
+    -moz-box-shadow: inset 0 1px 0 #ffe5c4, 0 6px 0 #f555d2;
+    box-shadow: inset 0 1px 0 #ffe5c4, 0 6px 0 #f555d2;
+  }
+
+  .button a:active {
+    top: 6px;
+  }
+
+  .button:after {
+    bottom: -10px;
+  }
+
+  .titulos {
+    position: fixed;
+    padding: 50px 20px;
+    font-size: 28px;
+    width: 90%;
+    max-width: 400px;
+    background: #3e007128;
+  }
+
+  .content-container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 10px;
+  }
+
+  .column {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .image-container {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .image-container img {
+    width: 200px;
+    height: 320px;
+    object-fit: cover;
+  }
 }
 
-/*Medidas*/
+/* Media Queries para celulares pequeños */
+@media (max-width: 360px) {
+  .button a {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .titulos {
+    padding: 40px 15px;
+    background: #3e007128;
+    font-size: 24px;
+    width: 92%;
+  }
+
+  .image-container img {
+    width: 180px;
+    height: 280px;
+  }
+
+  .content-container {
+    gap: 25px;
+    padding: 15px 8px;
+  }
+}
+
+/* Media Queries para celulares muy pequeños */
+@media (max-width: 320px) {
+  .button a {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .titulos {
+    padding: 35px 12px;
+    background: #3e007128;
+    font-size: 20px;
+    width: 95%;
+    border: 1.5px solid #fb2576;
+  }
+
+  .image-container img {
+    width: 160px;
+    height: 260px;
+  }
+
+  .content-container {
+    gap: 20px;
+    padding: 10px 5px;
+  }
+
+  .column {
+    gap: 10px;
+  }
+}
