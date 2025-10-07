@@ -103,7 +103,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #3e007175;
+  background: #3e0071ee;
   color: #fb2576;
   font-family: monospace;
   text-align: center;
@@ -114,6 +114,8 @@
   font-size: 10px;
   backdrop-filter: blur(10px);
   pointer-events: auto;
+  overflow-y: auto;
+  max-height: 90vh;
 }
 
 /*medeia para compu*/
@@ -130,7 +132,6 @@
   .titulos {
     padding: 200px 200px;
     font-size: 50px;
-    background: #3e007175;
   }
 
   .content-container {
@@ -158,7 +159,6 @@
   .titulos {
     padding: 100px 90px;
     font-size: 50px;
-    background: #3e007175;
   }
 
   .image-container img {
@@ -185,11 +185,13 @@
   }
 
   .titulos {
-    padding: 70px 25px;
-    font-size: 32px;
-    width: 75%;
+    padding: 50px 20px;
+    font-size: 28px;
+    width: 85%;
     max-width: none;
-    background: #3e007175;
+    max-height: 85vh;
+    background: #3e0071ee;
+    overflow-y: auto;
   }
 
   .image-container {
@@ -224,8 +226,8 @@
   }
 
   .button a {
-    font-size: 18px;
-    padding: 12px 25px;
+    font-size: 16px;
+    padding: 10px 20px;
     -webkit-box-shadow: inset 0 1px 0 #ffe5c4, 0 6px 0 #f555d2;
     -moz-box-shadow: inset 0 1px 0 #ffe5c4, 0 6px 0 #f555d2;
     box-shadow: inset 0 1px 0 #ffe5c4, 0 6px 0 #f555d2;
@@ -240,11 +242,13 @@
   }
 
   .titulos {
-    padding: 50px 20px;
-    font-size: 26px;
-    width: 85%;
+    padding: 40px 15px;
+    font-size: 24px;
+    width: 90%;
     max-width: none;
-    background: #3e007175;
+    max-height: 85vh;
+    background: #3e0071ee;
+    overflow-y: auto;
   }
 
   .content-container {
@@ -274,16 +278,18 @@
 /* Media Queries para celulares pequeños */
 @media (max-width: 360px) {
   .button a {
-    font-size: 16px;
-    padding: 10px 20px;
+    font-size: 14px;
+    padding: 8px 15px;
   }
 
   .titulos {
-    padding: 40px 15px;
-    font-size: 22px;
-    width: 88%;
+    padding: 35px 12px;
+    font-size: 20px;
+    width: 92%;
     max-width: none;
-    background: #3e007175;
+    max-height: 85vh;
+    background: #3e0071ee;
+    overflow-y: auto;
   }
 
   .image-container img {
@@ -305,12 +311,15 @@
   }
 
   .titulos {
-    padding: 35px 12px;
-    font-size: 20px;
-    width: 92%;
+    padding: 30px 10px;
+    font-size: 18px;
+    width: 94%;
     max-width: none;
+    max-height: 85vh;
     border: 1.5px solid #fb2576;
-    background: #3e007175;
+    background: #3e0071ee;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .image-container img {
