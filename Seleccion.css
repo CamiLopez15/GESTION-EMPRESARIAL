@@ -173,23 +173,22 @@
 /* Media Queries para tablets */
 @media (max-width: 768px) {
   .button {
-    margin: 15px auto;
-    max-width: 220px;
+    margin: 12px auto;
+    max-width: 200px;
   }
 
   .button a {
-    font-size: 16px;
-    padding: 10px 20px;
+    font-size: 14px;
+    padding: 8px 16px;
   }
 
   .titulos {
-    padding: 40px 25px;
-    font-size: 26px;
-    width: 80%;
-    max-width: none;
-    max-height: 80vh;
+    padding: 30px 20px;
+    font-size: 22px;
+    width: 85%;
+    height: auto;
+    max-height: none;
     background: #3e0071ee;
-    overflow-y: auto;
   }
 
   .image-container {
@@ -198,16 +197,16 @@
   }
 
   .image-container img {
-    width: 180px;
-    height: 280px;
+    width: 140px;
+    height: 220px;
     object-fit: cover;
   }
 
   .content-container {
     flex-direction: column;
     align-items: center;
-    gap: 30px;
-    padding: 15px 10px;
+    gap: 25px;
+    padding: 12px 8px;
   }
 
   .column {
@@ -220,40 +219,39 @@
 @media (max-width: 480px) {
   .button {
     margin: 8px auto;
-    max-width: 85%;
+    max-width: 80%;
   }
 
   .button a {
-    font-size: 14px;
-    padding: 10px 18px;
-    -webkit-box-shadow: inset 0 1px 0 #ffe5c4, 0 5px 0 #f555d2;
-    -moz-box-shadow: inset 0 1px 0 #ffe5c4, 0 5px 0 #f555d2;
-    box-shadow: inset 0 1px 0 #ffe5c4, 0 5px 0 #f555d2;
+    font-size: 12px;
+    padding: 8px 15px;
+    -webkit-box-shadow: inset 0 1px 0 #ffe5c4, 0 4px 0 #f555d2;
+    -moz-box-shadow: inset 0 1px 0 #ffe5c4, 0 4px 0 #f555d2;
+    box-shadow: inset 0 1px 0 #ffe5c4, 0 4px 0 #f555d2;
   }
 
   .button a:active {
-    top: 5px;
+    top: 4px;
   }
 
   .button:after {
-    bottom: -8px;
+    bottom: -7px;
   }
 
   .titulos {
-    padding: 25px 15px;
-    font-size: 20px;
+    padding: 20px 12px;
+    font-size: 16px;
     width: 88%;
-    max-width: none;
-    max-height: 75vh;
+    height: auto;
+    max-height: none;
     background: #3e0071f5;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+    line-height: 1.3;
   }
 
   .content-container {
     flex-direction: column;
-    gap: 20px;
-    padding: 15px 8px;
+    gap: 15px;
+    padding: 10px 5px;
   }
 
   .column {
@@ -264,12 +262,12 @@
   .image-container {
     width: 100%;
     height: auto;
-    padding: 5px;
+    padding: 3px;
   }
 
   .image-container img {
-    width: 160px;
-    height: 260px;
+    width: 120px;
+    height: 190px;
     object-fit: cover;
   }
 }
@@ -277,26 +275,25 @@
 /* Media Queries para celulares estándar (iPhone SE, Galaxy A, etc) */
 @media (max-width: 390px) {
   .button a {
-    font-size: 13px;
-    padding: 9px 16px;
+    font-size: 11px;
+    padding: 7px 14px;
   }
 
   .titulos {
-    padding: 20px 12px;
-    font-size: 18px;
+    padding: 18px 10px;
+    font-size: 15px;
     width: 90%;
-    max-height: 72vh;
-    background: #3e0071f5;
+    line-height: 1.2;
   }
 
   .image-container img {
-    width: 150px;
-    height: 240px;
+    width: 110px;
+    height: 175px;
   }
 
   .content-container {
-    gap: 18px;
-    padding: 12px 6px;
+    gap: 12px;
+    padding: 8px 4px;
   }
 }
 
@@ -307,28 +304,25 @@
   }
 
   .button a {
-    font-size: 12px;
-    padding: 8px 14px;
+    font-size: 10px;
+    padding: 6px 12px;
   }
 
   .titulos {
-    padding: 18px 10px;
-    font-size: 16px;
+    padding: 15px 8px;
+    font-size: 14px;
     width: 92%;
-    max-height: 70vh;
-    background: #3e0071f5;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+    line-height: 1.2;
   }
 
   .image-container img {
-    width: 140px;
-    height: 220px;
+    width: 100px;
+    height: 160px;
   }
 
   .content-container {
-    gap: 15px;
-    padding: 10px 5px;
+    gap: 10px;
+    padding: 6px 3px;
   }
 }
 
@@ -339,32 +333,30 @@
   }
 
   .button a {
-    font-size: 11px;
-    padding: 7px 12px;
+    font-size: 9px;
+    padding: 5px 10px;
   }
 
   .titulos {
-    padding: 15px 8px;
-    font-size: 14px;
+    padding: 12px 6px;
+    font-size: 12px;
     width: 94%;
-    max-height: 68vh;
     border: 1.5px solid #fb2576;
     background: #3e0071f5;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+    line-height: 1.1;
   }
 
   .image-container img {
-    width: 130px;
-    height: 200px;
+    width: 90px;
+    height: 145px;
   }
 
   .content-container {
-    gap: 12px;
-    padding: 8px 4px;
+    gap: 8px;
+    padding: 5px 2px;
   }
 
   .column {
-    gap: 8px;
+    gap: 6px;
   }
 }
