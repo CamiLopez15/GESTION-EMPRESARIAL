@@ -103,7 +103,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #3e0071ee;
+  background: #3e007175;
   color: #fb2576;
   font-family: monospace;
   text-align: center;
@@ -130,6 +130,7 @@
   .titulos {
     padding: 200px 200px;
     font-size: 50px;
+    background: #3e007175;
   }
 
   .content-container {
@@ -157,6 +158,7 @@
   .titulos {
     padding: 100px 90px;
     font-size: 50px;
+    background: #3e007175;
   }
 
   .image-container img {
@@ -187,7 +189,7 @@
     font-size: 32px;
     width: 75%;
     max-width: none;
-    background: #3e0071ee;
+    background: #3e007175;
   }
 
   .image-container {
@@ -242,7 +244,7 @@
     font-size: 26px;
     width: 85%;
     max-width: none;
-    background: #3e0071ee;
+    background: #3e007175;
   }
 
   .content-container {
@@ -281,7 +283,7 @@
     font-size: 22px;
     width: 88%;
     max-width: none;
-    background: #3e0071ee;
+    background: #3e007175;
   }
 
   .image-container img {
@@ -308,7 +310,7 @@
     width: 92%;
     max-width: none;
     border: 1.5px solid #fb2576;
-    background: #3e0071ee;
+    background: #3e007175;
   }
 
   .image-container img {
