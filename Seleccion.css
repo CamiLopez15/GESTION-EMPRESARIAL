@@ -217,35 +217,24 @@
 
 /* Media Queries para celulares grandes (iPhone 12, Galaxy S21, etc) */
 @media (max-width: 480px) {
-  .button {
-    margin: 8px auto;
-    max-width: 80%;
-  }
-
-  .button a {
-    font-size: 12px;
-    padding: 8px 15px;
-    -webkit-box-shadow: inset 0 1px 0 #ffe5c4, 0 4px 0 #f555d2;
-    -moz-box-shadow: inset 0 1px 0 #ffe5c4, 0 4px 0 #f555d2;
-    box-shadow: inset 0 1px 0 #ffe5c4, 0 4px 0 #f555d2;
-  }
-
-  .button a:active {
-    top: 4px;
-  }
-
-  .button:after {
-    bottom: -7px;
-  }
 
   .titulos {
-    padding: 20px 12px;
-    font-size: 16px;
-    width: 88%;
+    padding: 20px 2px;
+    width: 80%;
     height: auto;
     max-height: none;
     background: #3e0071f5;
     line-height: 1.3;
+  }
+
+    .titulos h1 {
+    font-size: 30px;
+   
+  }
+  
+  
+  .animated-title h1 {
+    font-size: 1px;
   }
 
   .content-container {
@@ -266,8 +255,8 @@
   }
 
   .image-container img {
-    width: 120px;
-    height: 190px;
+    width: 100px;
+    height: 150px;
     object-fit: cover;
   }
 }
@@ -297,66 +286,3 @@
   }
 }
 
-/* Media Queries para celulares pequeños (iPhone 5/SE, pequeños Android) */
-@media (max-width: 360px) {
-  .button {
-    margin: 6px auto;
-  }
-
-  .button a {
-    font-size: 10px;
-    padding: 6px 12px;
-  }
-
-  .titulos {
-    padding: 15px 8px;
-    font-size: 10px;
-    width: 92%;
-    line-height: 1.2;
-  }
-
-  .image-container img {
-    width: 100px;
-    height: 160px;
-  }
-
-  .content-container {
-    gap: 10px;
-    padding: 6px 3px;
-  }
-}
-
-/* Media Queries para celulares muy pequeños */
-@media (max-width: 320px) {
-  .button {
-    margin: 5px auto;
-  }
-
-  .button a {
-    font-size: 9px;
-    padding: 5px 10px;
-  }
-
-  .titulos {
-    padding: 12px 6px;
-    font-size: 10px;
-    width: 94%;
-    border: 1.5px solid #fb2576;
-    background: #3e0071f5;
-    line-height: 1.1;
-  }
-
-  .image-container img {
-    width: 90px;
-    height: 145px;
-  }
-
-  .content-container {
-    gap: 8px;
-    padding: 5px 2px;
-  }
-
-  .column {
-    gap: 6px;
-  }
-}
