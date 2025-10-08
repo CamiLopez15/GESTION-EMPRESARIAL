@@ -7,7 +7,7 @@
     const infoText = document.getElementById('infoText');
     
     let timerInterval;
-    let timeRemaining = 120; // 2 minutos en segundos
+    let timeRemaining = 60; // 1 minutos en segundos
 
     // Texto informativo que se mostrará
     const infoMessage = "Este video presenta una situación importante que requiere tu decisión. Observa cuidadosamente todos los detalles presentados, ya que al finalizar tendrás que elegir entre dos opciones.";
