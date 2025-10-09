@@ -20,22 +20,23 @@
       backdrop-filter: blur(10px);
     }
 
-    .video-container {
+        .video-container {
       width: 100%;
-      aspect-ratio: 16 / 9;
       background: #000;
       border-radius: 8px;
       overflow: hidden;
       box-shadow: 0 8px 30px rgba(251, 37, 118, 0.4);
       margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .video-container video {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      display: block;
     }
-
     .timer-container {
       text-align: center;
       margin-bottom: 0;
@@ -118,12 +119,13 @@
     .buttons-container {
       display: flex;
       gap: 30px;
-      justify-content: center;
+
       align-items: center;
       flex-wrap: wrap;
       opacity: 0;
       pointer-events: none;
       transition: opacity 0.5s ease;
+      justify-content: stretch;
     }
 
     .buttons-container.active {
@@ -137,6 +139,7 @@
       flex: 1;
       min-width: 200px;
       max-width: 320px;
+      justify-content: stretch;
     }
 
     .button a {
@@ -158,6 +161,7 @@
       border-radius: 8px;
       transition: all 0.1s ease;
       cursor: pointer;
+      justify-content: stretch;
     }
 
     .button.option2 a {
