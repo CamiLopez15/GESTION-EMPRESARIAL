@@ -250,3 +250,44 @@
         bottom: -10px;
       }
     }
+
+     /* Responsive para móviles */
+    @media (max-width: 380px) {
+      .video-section {
+        padding: 20px 15px;
+        width: 95%;
+      }
+
+      .container {
+        gap: 25px;
+      }
+
+      .video-container {
+        margin-bottom: 15px;
+      }
+
+      .info-text-container {
+        padding: 15px;
+        margin-bottom: 15px;
+      }
+
+      .buttons-container {
+        flex-direction: column;
+        max-width: 100%;
+        gap: 15px;
+      }
+
+      .button {
+        width: 90%;
+        max-width: 50%;
+      }
+
+      .button a {
+        padding: 15px 30px;
+        font-size: 20px;
+      }
+
+      .button:after {
+        bottom: -10px;
+      }
+    }
