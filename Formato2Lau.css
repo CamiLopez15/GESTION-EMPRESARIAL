@@ -232,82 +232,83 @@
 
 /* Responsive para móviles */
 @media (max-width: 480px) {
-  .video-section {
-    padding: 20px 15px;
-    width: 95%;
-  }
+    .video-section {
+        padding: 20px 15px;
+        width: 95%;
+    }
 
-  .container {
-    gap: 25px;
-  }
+    .container {
+        gap: 25px;
+    }
 
-  .video-container {
-    margin-bottom: 15px;
-  }
+    .video-container {
+        margin-bottom: 15px;
+    }
 
-  .info-text-container {
-    padding: 15px;
-    margin-bottom: 15px;
-  }
+    .info-text-container {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
 
-  .buttons-container {
-    flex-direction: column;
-    max-width: 100%;
-  }
+    .buttons-container {
+        flex-direction: column;
+        max-width: 100%;
+        align-items: stretch;
+    }
 
-  .button {
-    width: 80%;
-    max-width: 100%;
-  }
+    .button {
+        width: 100%;
+        max-width: 100%;
+    }
 
-  .button a {
-    padding: 15px 30px;
-    font-size: 18px;
-  }
+    .button a {
+        padding: 15px 30px;
+        font-size: 18px;
+    }
 
-  .button:after {
-    bottom: -10px;
-  }
+    .button:after {
+        bottom: -10px;
+    }
 }
 
-/* Responsive para móviles */
+/* Responsive para móviles pequeños */
 @media (max-width: 380px) {
-  .video-section {
-    padding: 20px 15px;
-    width: 95%;
-  }
+    .video-section {
+        padding: 20px 15px;
+        width: 95%;
+    }
 
-  .container {
-    gap: 25px;
-  }
+    .container {
+        gap: 25px;
+    }
 
-  .video-container {
-    margin-bottom: 15px;
-  }
+    .video-container {
+        margin-bottom: 15px;
+    }
 
-  .info-text-container {
-    padding: 15px;
-    margin-bottom: 15px;
-  }
+    .info-text-container {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
 
-  .buttons-container {
-    flex-direction: column;
-    max-width: 100%;
-    justify-content: stretch;
-  }
+    .buttons-container {
+        flex-direction: column;
+        max-width: 100%;
+        align-items: stretch;
+    }
 
-  .button {
-    width: 90%;
-    max-width: 50%;
-    padding: 15px;
-  }
+    .button {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+    }
 
-  .button a {
-    padding: 15px 30px;
-    font-size: 15px;
-  }
+    .button a {
+        padding: 15px 30px;
+        font-size: 15px;
+    }
 
-  .button:after {
-    bottom: -10px;
-  }
+    .button:after {
+        bottom: -10px;
+    }
 }
