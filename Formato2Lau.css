@@ -233,17 +233,17 @@
       .buttons-container {
         flex-direction: column;
         max-width: 100%;
-        gap: 15px;
+  
       }
 
       .button {
-        width: 100%;
+        width: 80%;
         max-width: 100%;
       }
 
       .button a {
         padding: 15px 30px;
-        font-size: 20px;
+        font-size: 18px;
       }
 
       .button:after {
@@ -251,7 +251,7 @@
       }
     }
 
-      /* Responsive para móviles */
+     /* Responsive para móviles */
     @media (max-width: 380px) {
       .video-section {
         padding: 20px 15px;
@@ -274,17 +274,18 @@
       .buttons-container {
         flex-direction: column;
         max-width: 100%;
-        gap: 15px;
+        justify-content: stretch;
       }
 
       .button {
         width: 90%;
-        max-width: 100%;
+        max-width: 50%;
+         padding: 15px;
       }
 
       .button a {
         padding: 15px 30px;
-        font-size: 20px;
+        font-size: 15px;
       }
 
       .button:after {
