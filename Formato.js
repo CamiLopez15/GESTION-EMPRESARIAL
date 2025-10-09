@@ -7,10 +7,10 @@
     const infoText = document.getElementById('infoText');
     
     let timerInterval;
-    let timeRemaining = 60; // 1 minutos en segundos
+    let timeRemaining = 90; // 1: 30 minutos en segundos
 
     // Texto informativo que se mostrará
-    const infoMessage = "escribiendo un mensaje se le da la instrucción ¿Cómo deseas enviar tu mensaje?";
+    const infoMessage = "Escribiendo un mensaje se le da la instrucción ¿Cómo deseas enviar tu mensaje?";
     
     // Velocidad de escritura (milisegundos por caracter)
     const typingSpeed = 50;
