@@ -10,7 +10,7 @@
     let timeRemaining = 90; // 1: 30 minutos en segundos
 
     // Texto informativo que se mostrará
-    const infoMessage = "Tu mensaje esta seguro, ¿quieres comprobar como llego tu mensaje?";
+    const infoMessage = "Tu mensaje esta seguro, ¿Quieres comprobar como llego tu mensaje?";
     
     // Velocidad de escritura (milisegundos por caracter)
     const typingSpeed = 50;

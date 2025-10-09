@@ -10,7 +10,7 @@
     let timeRemaining = 90; // 1: 30 minutos en segundos
 
     // Texto informativo que se mostrará
-    const infoMessage = "El mensaje está listo para enviarse, ¿antes deseas confirmar la identidad de tu receptor?";
+    const infoMessage = "El mensaje está listo para enviarse, ¿Antes deseas confirmar la identidad de tu receptor?";
     
     // Velocidad de escritura (milisegundos por caracter)
     const typingSpeed = 50;

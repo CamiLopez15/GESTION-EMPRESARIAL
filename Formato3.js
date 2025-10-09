@@ -10,7 +10,7 @@
     let timeRemaining = 90; // 1: 30 minutos en segundos
 
     // Texto informativo que se mostrará
-    const infoMessage = "Se confirmo la recepcion segura de tu mensaje ¿Quisieras añadir una contraseña para mayor seguridad?";
+    const infoMessage = "Se confirmo la recepción segura de tu mensaje ¿Quisieras añadir una contraseña para mayor seguridad?";
     
     // Velocidad de escritura (milisegundos por caracter)
     const typingSpeed = 50;
