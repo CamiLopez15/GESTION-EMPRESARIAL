@@ -10,7 +10,7 @@
     let timeRemaining = 60; // 1 minutos en segundos
 
     // Texto informativo que se mostrará
-    const infoMessage = "Este video presenta una situación importante que requiere tu decisión. Observa cuidadosamente todos los detalles presentados, ya que al finalizar tendrás que elegir entre dos opciones.";
+    const infoMessage = "escribiendo un mensaje se le da la instrucción ¿Cómo deseas enviar tu mensaje?";
     
     // Velocidad de escritura (milisegundos por caracter)
     const typingSpeed = 50;
