@@ -10,7 +10,7 @@
     let timeRemaining = 90; // 1: 30 minutos en segundos
 
     // Texto informativo que se mostrará
-    const infoMessage = "Hackearon tu mensaje por no tener dos canales";
+    const infoMessage = " Tu mensaje cayo en manos indebidas y no tuvieron problema para acceder a el";
     
     // Velocidad de escritura (milisegundos por caracter)
     const typingSpeed = 50;
