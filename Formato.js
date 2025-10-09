@@ -10,7 +10,7 @@
     let timeRemaining = 90; // 1: 30 minutos en segundos
 
     // Texto informativo que se mostrará
-    const infoMessage = "Escribiendo un mensaje se le da la instrucción ¿Cómo deseas enviar tu mensaje?";
+    const infoMessage = "Estas escribiendo un mensaje y temes que se flitre tu información ¿Cómo deseas enviar tu mensaje?";
     
     // Velocidad de escritura (milisegundos por caracter)
     const typingSpeed = 50;
