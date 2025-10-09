@@ -215,19 +215,19 @@
 
 /* Responsive para tablets */
 @media (max-width: 768px) {
-  .video-section {
-    padding: 25px 20px;
-    width: 95%;
-  }
+    .video-section {
+        padding: 25px 20px;
+        width: 95%;
+    }
 
-  .buttons-container {
-    max-width: 600px;
-    gap: 25px;
-  }
+    .buttons-container {
+        max-width: 600px;
+        gap: 25px;
+    }
 
-  .timer-display {
-    font-size: 48px;
-  }
+    .timer-display {
+        font-size: 48px;
+    }
 }
 
 /* Responsive para móviles */
@@ -252,13 +252,14 @@
 
     .buttons-container {
         flex-direction: column;
+        width: 100%;
         max-width: 100%;
-        align-items: stretch;
+        align-items: center;
     }
 
     .button {
-        width: 100%;
-        max-width: 100%;
+        width: 80%;
+        max-width: 80%;
     }
 
     .button a {
@@ -280,6 +281,7 @@
 
     .container {
         gap: 25px;
+        align-items: center;
     }
 
     .video-container {
@@ -293,14 +295,14 @@
 
     .buttons-container {
         flex-direction: column;
+        width: 100%;
         max-width: 100%;
-        align-items: stretch;
+        align-items: center;
     }
 
     .button {
-        width: 100%;
-        max-width: 100%;
-        padding: 15px;
+        width: 80%;
+        max-width: 80%;
     }
 
     .button a {
