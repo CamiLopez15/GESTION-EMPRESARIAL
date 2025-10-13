@@ -7,7 +7,7 @@ const infoTextContainer = document.getElementById('infoTextContainer');
 const infoText = document.getElementById('infoText');
 
 let timerInterval;
-let timeRemaining = 10; // 1:30 segundos
+let timeRemaining = 90; // 1:30 segundos
 let typingFinished = false;
 let hasStarted = false;
 
@@ -108,6 +108,6 @@ function enableButtons() {
 }
 
 function goToTimeoutPage() {
-  // Navegar directamente a video13.1.html cuando se acabe el tiempo
+  // Navegar directamente a videomalo.html cuando se acabe el tiempo
   window.location.href = 'video7.1.html';
 }

@@ -93,9 +93,9 @@ function startTimer() {
     if (timeRemaining <= 0) {
       clearInterval(timerInterval);
       enableButtons();
-      // Esperar 2 segundos antes de seleccionar un botón aleatorio
+      // Esperar 2 segundos antes de ir a video13.1.html
       setTimeout(() => {
-        selectRandomButton();
+        goToTimeoutPage();
       }, 2000);
     }
   }, 1000);
@@ -107,16 +107,7 @@ function enableButtons() {
   timerDisplay.style.color = '#00ff00';
 }
 
-function selectRandomButton() {
-  // Obtener todos los enlaces (botones) dentro del contenedor
-  const links = buttonsContainer.querySelectorAll('a');
-  
-  if (links.length > 0) {
-    // Seleccionar un índice aleatorio
-    const randomIndex = Math.floor(Math.random() * links.length);
-    const selectedLink = links[randomIndex];
-    
-    // Navegar al enlace seleccionado
-    window.location.href = selectedLink.href;
-  }
+function goToTimeoutPage() {
+  // Navegar directamente a videomalohtml cuando se acabe el tiempo
+  window.location.href = 'video7.3.html';
 }
