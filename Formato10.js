@@ -10,9 +10,10 @@ let timerInterval;
 let timeRemaining = 90; // 1:30 segundos
 let typingFinished = false;
 let hasStarted = false;
+let isTyping = false; // Nueva variable para controlar si ya está escribiendo
 
 // Texto informativo que se mostrará
-const infoMessage = "Tengo que enviar un mensaje importante, pero no quiero que nadie lo intercepte. A ver cómo me va con esto…                        Hay muchas formas de mandar un mensaje… algunas más seguras que otras. ¿Cuál uso esta vez?";
+const infoMessage = "Han puesto contraseñas y verificaciones... Buen intento. Pero todo sistema tiene sus vulnerabilidades. Voy a aplicar un poco de ingeniería social y fuerza bruta para romper estas defensas.";
 
 // Velocidad de escritura (milisegundos por caracter)
 const typingSpeed = 50;
@@ -47,15 +48,16 @@ document.addEventListener('click', () => {
   startEverything();
 }, { once: true });
 
-// Cuando el video empieza a reproducirse
+// Cuando el video empieza a reproducirse (solo la primera vez)
 video.addEventListener('play', () => {
-  if (!typingFinished) {
+  if (!isTyping && !typingFinished) {
     typeWriter(infoMessage, 0);
   }
 });
 
 function typeWriter(text, index) {
   if (index === 0) {
+    isTyping = true; // Marcar que está escribiendo
     infoTextContainer.classList.remove('hidden');
     infoTextContainer.classList.add('active');
     infoText.textContent = '';
@@ -68,12 +70,16 @@ function typeWriter(text, index) {
   } else {
     infoText.classList.add('finished');
     typingFinished = true;
+    isTyping = false; // Terminar de escribir
     // Iniciar el temporizador cuando termine de escribir el texto
     startTimer();
   }
 }
 
 function startTimer() {
+  // Solo iniciar el temporizador si no se ha iniciado ya
+  if (timerInterval) return;
+  
   timerContainer.classList.remove('hidden');
   
   timerInterval = setInterval(() => {
@@ -93,9 +99,9 @@ function startTimer() {
     if (timeRemaining <= 0) {
       clearInterval(timerInterval);
       enableButtons();
-      // Esperar 2 segundos antes de seleccionar un botón aleatorio
+      // Esperar 2 segundos antes de ir a video7.2.html
       setTimeout(() => {
-        selectRandomButton();
+        goToTimeoutPage();
       }, 2000);
     }
   }, 1000);
@@ -107,16 +113,7 @@ function enableButtons() {
   timerDisplay.style.color = '#00ff00';
 }
 
-function selectRandomButton() {
-  // Obtener todos los enlaces (botones) dentro del contenedor
-  const links = buttonsContainer.querySelectorAll('a');
-  
-  if (links.length > 0) {
-    // Seleccionar un índice aleatorio
-    const randomIndex = Math.floor(Math.random() * links.length);
-    const selectedLink = links[randomIndex];
-    
-    // Navegar al enlace seleccionado
-    window.location.href = selectedLink.href;
-  }
+function goToTimeoutPage() {
+  // Navegar directamente a video7.2.html cuando se acabe el tiempo
+  window.location.href = 'video13.1.html';
 }

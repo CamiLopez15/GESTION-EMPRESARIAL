@@ -10,9 +10,10 @@ let timerInterval;
 let timeRemaining = 90; // 1:30 segundos
 let typingFinished = false;
 let hasStarted = false;
+let isTyping = false; // Nueva variable para controlar si ya está escribiendo
 
 // Texto informativo que se mostrará
-const infoMessage = "Tengo que enviar un mensaje importante, pero no quiero que nadie lo intercepte. A ver cómo me va con esto…                        Hay muchas formas de mandar un mensaje… algunas más seguras que otras. ¿Cuál uso esta vez?";
+const infoMessage = "¡Maldición! Implementaron demasiadas capas de seguridad. No pudo romper ninguna de sus defensas. Tendré que esperar una oportunidad mejor... La paciencia es clave en este juego.";
 
 // Velocidad de escritura (milisegundos por caracter)
 const typingSpeed = 50;
@@ -47,15 +48,16 @@ document.addEventListener('click', () => {
   startEverything();
 }, { once: true });
 
-// Cuando el video empieza a reproducirse
+// Cuando el video empieza a reproducirse (solo la primera vez)
 video.addEventListener('play', () => {
-  if (!typingFinished) {
+  if (!isTyping && !typingFinished) {
     typeWriter(infoMessage, 0);
   }
 });
 
 function typeWriter(text, index) {
   if (index === 0) {
+    isTyping = true; // Marcar que está escribiendo
     infoTextContainer.classList.remove('hidden');
     infoTextContainer.classList.add('active');
     infoText.textContent = '';
@@ -68,55 +70,8 @@ function typeWriter(text, index) {
   } else {
     infoText.classList.add('finished');
     typingFinished = true;
+    isTyping = false; // Terminar de escribir
     // Iniciar el temporizador cuando termine de escribir el texto
     startTimer();
-  }
-}
-
-function startTimer() {
-  timerContainer.classList.remove('hidden');
-  
-  timerInterval = setInterval(() => {
-    timeRemaining--;
-    
-    const minutes = Math.floor(timeRemaining / 60);
-    const seconds = timeRemaining % 60;
-    
-    timerDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
-    
-    // Advertencia cuando quedan 10 segundos
-    if (timeRemaining <= 10 && timeRemaining > 0) {
-      timerDisplay.style.color = '#FF6B6B';
-      timerDisplay.style.animation = 'pulse 0.5s infinite';
-    }
-    
-    if (timeRemaining <= 0) {
-      clearInterval(timerInterval);
-      enableButtons();
-      // Esperar 2 segundos antes de seleccionar un botón aleatorio
-      setTimeout(() => {
-        selectRandomButton();
-      }, 2000);
-    }
-  }, 1000);
-}
-
-function enableButtons() {
-  buttonsContainer.classList.add('active');
-  timerDisplay.textContent = '¡Tiempo terminado!';
-  timerDisplay.style.color = '#00ff00';
-}
-
-function selectRandomButton() {
-  // Obtener todos los enlaces (botones) dentro del contenedor
-  const links = buttonsContainer.querySelectorAll('a');
-  
-  if (links.length > 0) {
-    // Seleccionar un índice aleatorio
-    const randomIndex = Math.floor(Math.random() * links.length);
-    const selectedLink = links[randomIndex];
-    
-    // Navegar al enlace seleccionado
-    window.location.href = selectedLink.href;
   }
 }
