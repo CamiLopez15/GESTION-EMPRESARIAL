@@ -232,6 +232,11 @@
 
 /* Responsive para móviles */
 @media (max-width: 480px) {
+   html, body {
+        height: auto;
+        overflow-y: auto; /* permite desplazarse verticalmente */
+        overflow-x: hidden; /* evita el scroll lateral */
+    }
     .video-section {
         padding: 20px 15px;
         width: 95%;
@@ -274,10 +279,17 @@
 
 /* Responsive para móviles pequeños */
 @media (max-width: 380px) {
+
+   html, body {
+        height: auto;
+        overflow-y: auto; /* permite desplazarse verticalmente */
+        overflow-x: hidden; /* evita el scroll lateral */
+    }
     .video-section {
         padding: 20px 15px;
         width: 95%;
     }
+    
 
     .container {
         gap: 25px;
