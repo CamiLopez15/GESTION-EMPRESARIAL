@@ -10,7 +10,7 @@
     let timeRemaining = 90; // 1: 30 minutos en segundos
 
     // Texto informativo que se mostrará
-    const infoMessage = "mensaje en espera xd";
+    const infoMessage = "Intentaste suplantar la voz, pero el usuario pidió comprobación fuera de banda y colgó.";
     
     // Velocidad de escritura (milisegundos por caracter)
     const typingSpeed = 50;
