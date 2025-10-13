@@ -1,76 +1,122 @@
 // Lógica del video y temporizador
-    const video = document.getElementById('mainVideo');
-    const timerContainer = document.getElementById('timerContainer');
-    const timerDisplay = document.getElementById('timerDisplay');
-    const buttonsContainer = document.getElementById('buttonsContainer');
-    const infoTextContainer = document.getElementById('infoTextContainer');
-    const infoText = document.getElementById('infoText');
-    
-    let timerInterval;
-    let timeRemaining = 90; // 1: 30 minutos en segundos
+const video = document.getElementById('mainVideo');
+const timerContainer = document.getElementById('timerContainer');
+const timerDisplay = document.getElementById('timerDisplay');
+const buttonsContainer = document.getElementById('buttonsContainer');
+const infoTextContainer = document.getElementById('infoTextContainer');
+const infoText = document.getElementById('infoText');
 
-    // Texto informativo que se mostrará
-    const infoMessage = "Tu mensaje llego completo y seguro a su destino :)";
-    
-    // Velocidad de escritura (milisegundos por caracter)
-    const typingSpeed = 50;
+let timerInterval;
+let timeRemaining = 90; // 1:30 segundos
+let typingFinished = false;
+let hasStarted = false;
 
-    // Cuando el video empieza a reproducirse
-    video.addEventListener('play', () => {
-      typeWriter(infoMessage, 0);
+// Texto informativo que se mostrará
+const infoMessage = "Tengo que enviar un mensaje importante, pero no quiero que nadie lo intercepte. A ver cómo me va con esto…                        Hay muchas formas de mandar un mensaje… algunas más seguras que otras. ¿Cuál uso esta vez?";
+
+// Velocidad de escritura (milisegundos por caracter)
+const typingSpeed = 50;
+
+// Hacer que el video sea un bucle
+video.loop = true;
+
+// Función para iniciar todo
+function startEverything() {
+  if (!hasStarted) {
+    hasStarted = true;
+    video.play().then(() => {
+      console.log("Video reproduciendo automáticamente");
+    }).catch(error => {
+      console.log("Error al reproducir:", error);
     });
+  }
+}
 
-    // Cuando el video termina
-    video.addEventListener('ended', () => {
-      startTimer();
-    });
+// Intentar reproducir cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', () => {
+  startEverything();
+});
 
-    function typeWriter(text, index) {
-      if (index === 0) {
-        infoTextContainer.classList.remove('hidden');
-        infoTextContainer.classList.add('active');
-        infoText.textContent = '';
-        infoText.classList.remove('finished');
-      }
-      
-      if (index < text.length) {
-        infoText.textContent += text.charAt(index);
-        setTimeout(() => typeWriter(text, index + 1), typingSpeed);
-      } else {
-        infoText.classList.add('finished');
-      }
+// También intentar cuando la página cargue completamente
+window.addEventListener('load', () => {
+  startEverything();
+});
+
+// Intentar reproducir cuando el usuario haga cualquier interacción
+document.addEventListener('click', () => {
+  startEverything();
+}, { once: true });
+
+// Cuando el video empieza a reproducirse
+video.addEventListener('play', () => {
+  if (!typingFinished) {
+    typeWriter(infoMessage, 0);
+  }
+});
+
+function typeWriter(text, index) {
+  if (index === 0) {
+    infoTextContainer.classList.remove('hidden');
+    infoTextContainer.classList.add('active');
+    infoText.textContent = '';
+    infoText.classList.remove('finished');
+  }
+  
+  if (index < text.length) {
+    infoText.textContent += text.charAt(index);
+    setTimeout(() => typeWriter(text, index + 1), typingSpeed);
+  } else {
+    infoText.classList.add('finished');
+    typingFinished = true;
+    // Iniciar el temporizador cuando termine de escribir el texto
+    startTimer();
+  }
+}
+
+function startTimer() {
+  timerContainer.classList.remove('hidden');
+  
+  timerInterval = setInterval(() => {
+    timeRemaining--;
+    
+    const minutes = Math.floor(timeRemaining / 60);
+    const seconds = timeRemaining % 60;
+    
+    timerDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+    
+    // Advertencia cuando quedan 10 segundos
+    if (timeRemaining <= 10 && timeRemaining > 0) {
+      timerDisplay.style.color = '#FF6B6B';
+      timerDisplay.style.animation = 'pulse 0.5s infinite';
     }
-
-    function startTimer() {
-      timerContainer.classList.remove('hidden');
-      
-      timerInterval = setInterval(() => {
-        timeRemaining--;
-        
-        const minutes = Math.floor(timeRemaining / 60);
-        const seconds = timeRemaining % 60;
-        
-        timerDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
-        
-        // Advertencia cuando quedan 10 segundos
-        if (timeRemaining <= 10 && timeRemaining > 0) {
-          timerDisplay.style.color = '#FF6B6B';
-          timerDisplay.style.animation = 'pulse 0.5s infinite';
-        }
-        
-        if (timeRemaining <= 0) {
-          clearInterval(timerInterval);
-          enableButtons();
-        }
-      }, 1000);
+    
+    if (timeRemaining <= 0) {
+      clearInterval(timerInterval);
+      enableButtons();
+      // Esperar 2 segundos antes de seleccionar un botón aleatorio
+      setTimeout(() => {
+        selectRandomButton();
+      }, 2000);
     }
+  }, 1000);
+}
 
-    function enableButtons() {
-      buttonsContainer.classList.add('active');
-      timerDisplay.textContent = '¡Tiempo terminado!';
-      timerDisplay.style.color = '#00ff00';
-    }
+function enableButtons() {
+  buttonsContainer.classList.add('active');
+  timerDisplay.textContent = '¡Tiempo terminado!';
+  timerDisplay.style.color = '#00ff00';
+}
 
-    // Opcional: Iniciar el texto automáticamente al cargar la página para pruebas
-    // Descomenta la siguiente línea si quieres ver el texto sin reproducir el video
-    // typeWriter(infoMessage, 0);
+function selectRandomButton() {
+  // Obtener todos los enlaces (botones) dentro del contenedor
+  const links = buttonsContainer.querySelectorAll('a');
+  
+  if (links.length > 0) {
+    // Seleccionar un índice aleatorio
+    const randomIndex = Math.floor(Math.random() * links.length);
+    const selectedLink = links[randomIndex];
+    
+    // Navegar al enlace seleccionado
+    window.location.href = selectedLink.href;
+  }
+}
