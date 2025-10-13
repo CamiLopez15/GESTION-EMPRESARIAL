@@ -10,6 +10,7 @@ let timerInterval;
 let timeRemaining = 90; // 1:30 segundos
 let typingFinished = false;
 let hasStarted = false;
+let isTyping = false; // Nueva variable para controlar si ya está escribiendo
 
 // Texto informativo que se mostrará
 const infoMessage = "Dividir el mensaje en dos partes y enviarlas por canales diferentes fue inteligente. Si alguien intercepta uno, solo tendrá fragmentos sin sentido. La clave está en que ambas partes lleguen a destino de forma segura.";
@@ -47,15 +48,16 @@ document.addEventListener('click', () => {
   startEverything();
 }, { once: true });
 
-// Cuando el video empieza a reproducirse
+// Cuando el video empieza a reproducirse (solo la primera vez)
 video.addEventListener('play', () => {
-  if (!typingFinished) {
+  if (!isTyping && !typingFinished) {
     typeWriter(infoMessage, 0);
   }
 });
 
 function typeWriter(text, index) {
   if (index === 0) {
+    isTyping = true; // Marcar que está escribiendo
     infoTextContainer.classList.remove('hidden');
     infoTextContainer.classList.add('active');
     infoText.textContent = '';
@@ -68,12 +70,16 @@ function typeWriter(text, index) {
   } else {
     infoText.classList.add('finished');
     typingFinished = true;
+    isTyping = false; // Terminar de escribir
     // Iniciar el temporizador cuando termine de escribir el texto
     startTimer();
   }
 }
 
 function startTimer() {
+  // Solo iniciar el temporizador si no se ha iniciado ya
+  if (timerInterval) return;
+  
   timerContainer.classList.remove('hidden');
   
   timerInterval = setInterval(() => {
@@ -93,7 +99,7 @@ function startTimer() {
     if (timeRemaining <= 0) {
       clearInterval(timerInterval);
       enableButtons();
-      // Esperar 2 segundos antes de ir a video13.1.html
+      // Esperar 2 segundos antes de ir a video7.2.html
       setTimeout(() => {
         goToTimeoutPage();
       }, 2000);
@@ -108,6 +114,6 @@ function enableButtons() {
 }
 
 function goToTimeoutPage() {
-  // Navegar directamente a videomalohtml cuando se acabe el tiempo
+  // Navegar directamente a video7.2.html cuando se acabe el tiempo
   window.location.href = 'video7.2.html';
 }

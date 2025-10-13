@@ -12,9 +12,7 @@ let typingFinished = false;
 let hasStarted = false;
 
 // Texto informativo que se mostrará
-const infoMessage = "Tengo que enviar un mensaje importante, pero no quiero que nadie lo intercepte. A ver cómo me va con esto…                        Hay muchas formas de mandar un mensaje… algunas más seguras que otras. ¿Cuál uso esta vez?";
-
-// Velocidad de escritura (milisegundos por caracter)
+const infoMessage = "¡Misión cumplida! El mensaje llegó intacto, protegido y sin interferencias. Tomé todas las precauciones necesarias: división del mensaje, verificación de identidad y comprobación de integridad. La seguridad siempre vale el esfuerzo extra.";
 const typingSpeed = 50;
 
 // Hacer que el video sea un bucle
@@ -105,18 +103,4 @@ function enableButtons() {
   buttonsContainer.classList.add('active');
   timerDisplay.textContent = '¡Tiempo terminado!';
   timerDisplay.style.color = '#00ff00';
-}
-
-function selectRandomButton() {
-  // Obtener todos los enlaces (botones) dentro del contenedor
-  const links = buttonsContainer.querySelectorAll('a');
-  
-  if (links.length > 0) {
-    // Seleccionar un índice aleatorio
-    const randomIndex = Math.floor(Math.random() * links.length);
-    const selectedLink = links[randomIndex];
-    
-    // Navegar al enlace seleccionado
-    window.location.href = selectedLink.href;
-  }
 }
