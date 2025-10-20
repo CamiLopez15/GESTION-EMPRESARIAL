@@ -133,7 +133,7 @@
   }
 
   .content-container {
-    gap: 200px;
+    gap: 150px;
   }
 
   .image-container img {
@@ -154,14 +154,6 @@
     padding: 10px 20px;
   }
 
-  /* Adjusted for medium desktop / large tablet screens (around 1024px)
-     Reduce extreme paddings and set sensible image sizes and gaps */
-  .titulos {
-    /* smaller padding so the title box doesn't overflow */
-    padding: 40px 60px;
-    font-size: 32px;
-    max-width: 90%;
-  }
 
   .titulos h1 {
     margin: 0;
@@ -169,8 +161,8 @@
   }
 
   .image-container img {
-    width: 260px;
-    height: 260px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
   }
 
@@ -180,9 +172,12 @@
 }
 
 /*media para compu*/
-@media (max-width: 1024px) {
+@media (max-width: 1366px) and (min-width: 1000px) {
   .titulos {
     padding: 60px 180px;
+  }
+
+    .titulos  h1{
     font-size: 36px;
   }
 
