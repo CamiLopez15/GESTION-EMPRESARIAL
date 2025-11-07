@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Fondo Matrix */
+#matrix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Caja de instrucciones arriba */
+.instrucciones-box {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* Animación */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Caja contenedora */
+.instrucciones-box {
+  max-width: 700px;
+  margin: 50px auto;
+  background: #3f00713f;
+  border: 2px solid #fb2576;
+  color: #fb2576;
+  font-family: monospace;
+  padding: 40px;
+  text-align: center;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.instrucciones-box h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.instrucciones-box p {
+  font-size: 22px;
+  margin: 15px 0;
+}
+
+.resaltar {
+  color: #332FD0;
+  font-weight: bold;
+}
+
+/* --- Botón (se usa tu mismo estilo) --- */
+
+.button {
+  position: relative;
+  display: inline-block;
+}
+
+.button a {
+  color: white;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  text-decoration: none;
+  background-color: #fb2576;
+  padding: 18px 40px;
+  border-radius: 8px;
+  display: block;
+  position: relative;
+  top: 0;
+  transition: top 0.1s ease;
+  box-shadow: inset 0 1px 0 #ffe5c4, 0 8px 0 #f555d2;
+}
+
+.button a:active {
+  top: 8px;
+  background-color: #332fd0;
+  box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #002cbb;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #2b1800;
+  border-radius: 8px;
+  top: 8px; /* <-- Antes era bottom: -15px (lo causaba el error) */
+  left: 0;
+  z-index: -1;
+}
+
+
+/* Responsive */
+@media(max-width: 480px){
+  .instrucciones-box h1 {
+    font-size: 30px;
+  }
+  .instrucciones-box p {
+    font-size: 18px;
+  }
+  .button a {
+    font-size: 20px;
+    padding: 12px 25px;
+  }
+}
