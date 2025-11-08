@@ -145,60 +145,48 @@
   }
 }
 
+/* 📌 Ajuste para tabletas pequeñas (entre 900px y 600px) */
+@media (max-width: 900px) and (min-width: 600px) {
 
-
-
-/* Media Queries para tablets */
-@media (max-width: 900px) {
   .titulos {
-    padding: 20px 2px;
-    width: 80%;
-    height: auto;
-    max-height: none;
-    background: #3e007125;
+    padding: 30px 40px;
+    width: 85%;
+    font-size: 28px;
     line-height: 1.3;
   }
-    .button a {
-    font-size: 20px;
-    padding: 12px 20px;
-  }
-    .button {
-    margin: 15px auto;
-    max-width: 250px;
-  }
 
-    .titulos h1 {
-    font-size: 30px;
-   
-  }
-  
-  .animated-title h1 {
-    font-size: 1px;
+  .titulos h1 {
+    font-size: 32px;
   }
 
   .content-container {
     flex-direction: column;
-    gap: 15px;
-    padding: 10px 5px;
-  }
-
-  .column {
-    max-width: 100%;
+    gap: 30px;
+    padding: 10px;
     width: 100%;
   }
 
   .image-container {
-    width: 100%;
-    height: auto;
-    padding: 3px;
+    width: 250px;
+    height: 250px;
   }
 
   .image-container img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
+    width: 200px;
+    height: 200px;
+  }
+
+  .button {
+    margin-top: 10px;
+  }
+
+  .button a {
+    font-size: 22px;
+    padding: 12px 24px;
   }
 }
+
+
 
 /* Media Queries para celulares grandes (iPhone 12, Galaxy S21, etc) */
 @media (max-width: 480px) {
