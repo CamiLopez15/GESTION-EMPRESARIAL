@@ -115,5 +115,5 @@ function enableButtons() {
 
 function goToTimeoutPage() {
   // Navegar directamente a video7.2.html cuando se acabe el tiempo
-  window.location.href = 'video7.2.html';
+  window.location.href = 'Video7.2.html';
 }
