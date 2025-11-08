@@ -277,7 +277,7 @@
 
     .video-section {
         padding: 20px 15px;
-        width: 95%;
+        width: 50%;
     }
 
     .container {
@@ -294,7 +294,6 @@
     }
 
     .buttons-container {
-        flex-direction: column;
         width: 100%;
         max-width: 100%;
         align-items: center;
