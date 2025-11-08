@@ -110,6 +110,52 @@ body {
 
 
 /* Responsive */
+/* 💻 Portátiles pequeños (pantallas entre 1366px y 1000px) */
+@media (max-width: 1920px) and (min-width: 1000px) {
+
+  .instrucciones-box {
+    max-width: 600px;
+    padding: 35px;
+  }
+
+  .instrucciones-box h1 {
+    font-size: 44px;
+  }
+
+  .instrucciones-box p {
+    font-size: 20px;
+  }
+
+  .button a {
+    font-size: 26px;
+    padding: 14px 35px;
+  }
+}
+
+/* 📌 Tabletas (pantallas entre 900px y 600px) */
+@media (max-width: 900px) and (min-width: 600px) {
+
+  .instrucciones-box {
+    max-width: 550px;
+    padding: 30px;
+    margin: 30px auto;
+  }
+
+  .instrucciones-box h1 {
+    font-size: 38px;
+  }
+
+  .instrucciones-box p {
+    font-size: 20px;
+  }
+
+  .button a {
+    font-size: 24px;
+    padding: 14px 30px;
+  }
+}
+
+
 @media(max-width: 480px){
   .instrucciones-box h1 {
     font-size: 30px;
