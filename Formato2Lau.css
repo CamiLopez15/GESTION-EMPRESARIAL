@@ -281,7 +281,7 @@
   }
 
   .video-section {
-      max-width: 600px;/*Cuadroo*/
+      max-width: 400px;/*Cuadroo*/
       padding: 20px 18px;
   }
 
@@ -291,7 +291,7 @@
   }
 
   .video-container video {
-      width: 70% ;
+      width: 90% ;
       max-height: 160px;
       border-radius: 6px;
   }
@@ -322,13 +322,13 @@
   }
 
   .button {
-      min-width: 150px;
-      max-width: 200px;
+      min-width: 100px;
+      max-width: 150px;
   }
 
   .button a {
       padding: 12px 22px;
-      font-size: 17px;
+      font-size: 10px;
       border-radius: 6px;
   }
 
