@@ -275,66 +275,44 @@
 /* TABLETAS (600px a 1000px) */
 @media (min-width: 600px) and (max-width: 900px) {
 
-  .container {
-      gap: 22px;
-      padding: 12px;
-  }
+    .video-section {
+        padding: 20px 15px;
+        width: 95%;
+    }
 
-  .video-section {
-      max-width: 400px;/*Cuadroo*/
-      padding: 20px 18px;
-  }
+    .container {
+        gap: 25px;
+    }
 
-  .video-container {
-      max-width: 500px;/*Vidos*/
-      margin: 0 auto;
-  }
+    .video-container {
+        margin-bottom: 15px;
+    }
 
-  .video-container video {
-      width: 90% ;
-      max-height: 160px;
-      border-radius: 6px;
-  }
+    .info-text-container {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
 
-  .info-text-container {
-      padding: 18px;
-      min-height: 60px;
-  }
+    .buttons-container {
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        align-items: center;
+    }
 
-  .info-text {
-      font-size: 15px;
-      line-height: 1.4;
-  }
+    .button {
+        width: 80%;
+        max-width: 80%;
+    }
 
-  .timer-display {
-      font-size: 27px;
-  }
+    .button a {
+        padding: 15px 30px;
+        font-size: 18px;
+    }
 
-  .timer-text {
-      font-size: 15px;
-  }
-
-  /* Botones más pequeños y centrados */
-  .buttons-container {
-      max-width: 300px;
-      gap: 16px;
-      justify-content: center;
-  }
-
-  .button {
-      min-width: 100px;
-      max-width: 150px;
-  }
-
-  .button a {
-      padding: 12px 22px;
-      font-size: 10px;
-      border-radius: 6px;
-  }
-
-  .button a:active {
-      top: 5px;
-  }
+    .button:after {
+        bottom: -10px;
+    }
 }
 
 /* Responsive para móviles */
