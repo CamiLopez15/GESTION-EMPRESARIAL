@@ -281,12 +281,12 @@
   }
 
   .video-section {
-      max-width: 600px;
+      max-width: 600px;/*Cuadroo*/
       padding: 20px 18px;
   }
 
   .video-container {
-      max-width: 500px;
+      max-width: 500px;/*Vidos*/
       margin: 0 auto;
   }
 
@@ -336,8 +336,6 @@
       top: 5px;
   }
 }
-
-
 
 /* Responsive para móviles */
 @media (max-width: 480px) {
