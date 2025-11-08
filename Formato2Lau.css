@@ -213,22 +213,66 @@
   opacity: 0.6;
 }
 
-/* Responsive para tablets */
-@media (max-width: 1366px) {
-    .video-section {
-        padding: 25px 20px;
-        width: 95%;
-    }
+/* SOLO PORTÁTILES (1024px a 1920px) */
+@media (min-width: 1024px) and (max-width: 1920px) {
 
-    .buttons-container {
-        max-width: 600px;
-        gap: 25px;
-    }
+  .container {
+      gap: 30px; /* Menos separación general */
+      padding: 10px;
+  }
 
-    .timer-display {
-        font-size: 48px;
-    }
+  .video-section {
+      max-width: 900px;  /* Caja más compacta */
+      padding: 25px 20px;
+  }
+
+  .video-container {
+      max-width: 980px;
+      margin: 0 auto;
+  }
+
+  .video-container video {
+      width: 90% ;       /* Reduce tamaño estético */
+      max-height: 520px;
+      border-radius: 6px;
+  }
+
+  /* Texto explicativo más delicado */
+  .info-text {
+      font-size:18px;
+  }
+
+  /* Título y timer más finos */
+  .timer-display {
+      font-size: 35px;
+  }
+
+  .timer-text {
+      font-size: 20px;
+  }
+
+  /* Botones más finos y compactos */
+  .buttons-container {
+      gap: 18px;
+      max-width: 600px;
+  }
+
+  .button {
+    width: 80%;
+    max-width: 80%;
 }
+
+.button a {
+    padding: 15px 30px;
+    font-size: 18px;
+}
+
+.button:after {
+    bottom: -10px;
+}
+}
+
+
 
 
 /* Responsive para tablets */
