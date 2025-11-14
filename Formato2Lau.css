@@ -301,7 +301,7 @@
   }
 
   .video-container {
-      max-width: 380px;
+      max-width: 280px;
       margin: 0 auto;
   }
 
@@ -332,7 +332,7 @@
 
   /* Timer compacto */
   .timer-display {
-      font-size: 20px;
+      font-size: 16px;
   }
 
   .timer-text {
@@ -342,12 +342,12 @@
   /* Botones super compactos */
   .buttons-container {
       gap: 6px;
-      max-width: 300px;
+      max-width: 200px;
   }
 
   .button {
-      width: 60%;
-      max-width: 60%;
+      width: 50%;
+      max-width: 50%;
   }
 
   .button a {
