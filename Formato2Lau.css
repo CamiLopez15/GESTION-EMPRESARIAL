@@ -214,7 +214,7 @@
 }
 
 /* SOLO PORTÁTILES (1024px a 1920px) */
-@media (min-width: 1000px) and (max-width: 1920px) {
+@media (min-width: 1024px) and (max-width: 1920px) {
 
   .container {
       gap: 20px; 
@@ -222,7 +222,7 @@
   }
 
   .video-section {
-      max-width: 50px;     /* Más pequeño */
+      max-width: 750px;     /* Más pequeño */
       padding: 18px 15px;
   }
 
@@ -289,7 +289,7 @@
 
 
 /* TABLETAS (600px a 1000px) */
-@media (min-width: 600px) and (max-width: 900px) {
+@media (min-width: 600px) and (max-width: 1000px) {
   html, body {
     height: auto;
     overflow-y: auto; /* permite desplazarse verticalmente */
@@ -301,7 +301,7 @@
   }
 
   .video-section {
-      max-width: 480px;       /* Más pequeño */
+      max-width: 80px;       /* Más pequeño */
       padding: 10px 8px;
   }
 
