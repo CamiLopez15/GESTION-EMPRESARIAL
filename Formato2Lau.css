@@ -215,62 +215,78 @@
 
 /* SOLO PORTÁTILES (1024px a 1920px) */
 @media (min-width: 1000px) and (max-width: 1920px) {
-/**/
+
   .container {
-      gap: 30px; /* Menos separación general */
-      padding: 10px;
+      gap: 20px; 
+      padding: 5px;
   }
 
   .video-section {
-      max-width: 900px;  /* Caja más compacta */
-      padding: 25px 20px;
+      max-width: 750px;     /* Más pequeño */
+      padding: 18px 15px;
   }
 
   .video-container {
-      max-width: 980px;
+      max-width: 820px;     /* Más compacto */
       margin: 0 auto;
   }
 
   .video-container video {
-      width: 90% ;       /* Reduce tamaño estético */
-      max-height: 520px;
+      width: 85%;           
+      max-height: 450px;    /* Reduce altura */
       border-radius: 6px;
   }
 
-  /* Texto explicativo más delicado */
+  /* Texto explicativo más compacto */
+
+  .info-text-container {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #fb2576;
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 10px;        /* 👈 Ajuste solicitado */
+    margin-bottom: 30px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
   .info-text {
-      font-size:18px;
+      font-size: 16px;
+      line-height: 1.3;
   }
 
-  /* Título y timer más finos */
+  /* Título y timer más pequeños */
   .timer-display {
-      font-size: 35px;
+      font-size: 30px;
   }
 
   .timer-text {
-      font-size: 20px;
+      font-size: 18px;
   }
 
-  /* Botones más finos y compactos */
+  /* Botones reducidos */
   .buttons-container {
-      gap: 18px;
-      max-width: 600px;
+      gap: 14px;
+      max-width: 500px;
   }
 
   .button {
-    width: 80%;
-    max-width: 80%;
+      width: 75%;
+      max-width: 75%;
+  }
+
+  .button a {
+      padding: 12px 25px;
+      font-size: 16px;
+  }
+
+  .button:after {
+      bottom: -8px;
+  }
 }
 
-.button a {
-    padding: 15px 30px;
-    font-size: 18px;
-}
-
-.button:after {
-    bottom: -10px;
-}
-}
 
 /* TABLETAS (600px a 1000px) */
 @media (min-width: 600px) and (max-width: 900px) {
