@@ -231,14 +231,25 @@
     height: 100px;
     object-fit: cover;
   }
-  .button {
-    margin-top: 10px;
-  }
+  .buttons-container {
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+}
 
-  .button a {
-    font-size: 10px;
-    padding: 12px 24px;
-  }
+.button {
+    width: 50%;
+    max-width: 50%;
+}
+
+.button a {
+    padding: 15px 30px;
+    font-size: 18px;
+}
+
+.button:after {
+    bottom: -10px;
+}
 }
 
 /* Media Queries para celulares estándar (iPhone SE, Galaxy A, etc) */
