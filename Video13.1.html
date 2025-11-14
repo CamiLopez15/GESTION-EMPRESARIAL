@@ -1,40 +1,43 @@
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Formato.css" />
-    <link rel="stylesheet" href="Body.css" />
-    <title>Video - Decisión Mala</title>
-  </head>
-  <body>
-    <canvas id="matrix"></canvas>
 
-    <div class="container">
-      <div class="video-section">
-        <div class="video-container">
-          <video id="mainVideo" controls>
-            <source src="VIDEOS\13VideoHacker.mp4" type="video/mp4" />
-            Tu navegador no soporta el elemento de video.
-          </video>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="Formato.css" />
+  <link rel="stylesheet" href="Body.css" />
+  <title>Video - Decisión Mala</title>
+</head>
 
-        <div class="info-text-container hidden" id="infoTextContainer">
-          <p class="info-text" id="infoText"></p>
-        </div>
+<body>
+  <canvas id="matrix"></canvas>
+
+  <div class="container">
+    <div class="video-section">
+      <div class="video-container">
+        <video id="mainVideo" controls>
+          <source src="VIDEOS\13VideoHacker.mp4" type="video/mp4" />
+          Tu navegador no soporta el elemento de video.
+        </video>
       </div>
 
-      <div class="buttons-container active" id="buttonsContainer">
-        <div class="button option1">
-          <a href="index.html" id="btnA">Volver al inicio</a>
-        </div>
-
-        <div class="button option2">
-          <a href="H1_HACK.HTML" id="btnB"> Voolver a Jugar </a>
-        </div>
+      <div class="info-text-container hidden" id="infoTextContainer">
+        <p class="info-text" id="infoText"></p>
       </div>
     </div>
 
-    <script src="Body.js"></script>
-    <script src="Formato13.1.js"></script>
-  </body>
+    <div class="buttons-container active" id="buttonsContainer">
+      <div class="button option1">
+        <a href="index.html" id="btnA">Volver al inicio</a>
+      </div>
+
+      <div class="button option2">
+        <a href="H1_HACK.HTML" id="btnB"> Voolver a Jugar </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="Body.js"></script>
+  <script src="Formato13.1.js"></script>
+</body>
+
 </html>
