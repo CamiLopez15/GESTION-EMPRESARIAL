@@ -136,7 +136,7 @@ body {
 @media (max-width: 900px) and (min-width: 600px) {
 
   .instrucciones-box {
-    max-width: 400px;
+    max-width: 460px;
     padding: 10px;
     margin: 30px auto;
   }
