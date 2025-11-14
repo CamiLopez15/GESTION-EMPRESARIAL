@@ -214,60 +214,74 @@
 
 /* SOLO PORTÁTILES (1024px a 1920px) */
 @media (min-width: 1000px) and (max-width: 1920px) {
-  /**/
+
   .container {
+      gap: 15px;
+      padding: 5px;
+  }
 
-  gap: 20px;           /* Menos separación */
-  padding: 3px 8px;
-}
+  .video-section {
+      max-width: 580px;     /* Mucho más pequeño */
+      padding: 14px 12px;
+  }
 
-.video-section {
-  max-width: 500px;   /* Caja más reducida */
-  padding: 10px;
-}
+  .video-container {
+      max-width: 580px;     /* Más compacto */
+      margin: 0 auto;
+  }
 
+  .video-container video {        
+      max-height: 380px;    /* Más bajo */
+      border-radius: 6px;
+  }
 
-/* Texto explicativo más delicado */
-.info-text {
-  font-size: 12px;
-   line-height: 1.3; /* Mejor compacto */
-}
+  /* Caja de texto explicativo compacta */
+  .info-text-container {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #fb2576;
+    border-radius: 8px;
+    padding: 18px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    min-height: 80px;       /* Más pequeña */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-/* Timer */
-.timer-display {
-  font-size: 20px;
-}
+  .info-text {
+      font-size: 14px;
+      line-height: 1.25;
+  }
 
-.timer-text {
-  font-size: 11px;
-}
+  /* Timer reducido */
+  .timer-display {
+      font-size: 26px;
+  }
 
-/* Botones centrados en fila */
-.buttons-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  width: 100%;
-  margin-top: 8px;
-}
+  .timer-text {
+      font-size: 16px;
+  }
 
-/* Botones más pequeños */
-.button {
-  width: auto;
-}
+  /* Botones reducidos */
+  .buttons-container {
+      gap: 14px;
+      max-width: 450px;
+  }
 
-.button a {
-  display: block;
-  padding: 6px 14px;
-  font-size: 11px;
-  border-radius: 5px;
-}
+  .button {
+      width: 70%;
+      max-width: 70%;
+  }
 
-/* Sombra más corta */
-.button:after {
-  bottom: -4px;
-}
+  .button a {
+      padding: 10px 15px;
+      font-size: 12px;
+  }
+
+  .button:after {
+      bottom: -6px;
+  }
 }
 
 
