@@ -237,7 +237,7 @@
 
 .video-container video {
   width: 100%;
-  max-height: 80px;   /* Video más pequeño */
+     /* Video más pequeño */
   border-radius: 5px;
 }
 
