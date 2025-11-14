@@ -222,7 +222,7 @@
   }
 
   .video-section {
-      max-width: 50px;     /* Más pequeño */
+      max-width: 750px;     /* Más pequeño */
       padding: 18px 15px;
   }
 
@@ -317,42 +317,42 @@
     border-radius: 6px;
     padding: 12px;
     margin-top: 6px;
-    margin-bottom: 15px;
-    min-height: 60px;        
+    margin-bottom: 10px;
+    min-height: 30px;        
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   .info-text {
-      font-size: 12px;
+      font-size: 10px;
       line-height: 1.2;
       text-align: center;
   }
 
   /* Timer compacto */
   .timer-display {
-      font-size: 16px;
+      font-size: 14px;
   }
 
   .timer-text {
-      font-size: 13px;
+      font-size: 10px;
   }
 
   /* Botones super compactos */
   .buttons-container {
       gap: 6px;
-      max-width: 200px;
+      max-width: 100px;
   }
 
   .button {
-      width: 50%;
-      max-width: 50%;
+      width: 40%;
+      max-width: 40%;
   }
 
   .button a {
       padding: 8px 15px;
-      font-size: 12px;
+      font-size: 10x;
   }
 
   .button:after {
