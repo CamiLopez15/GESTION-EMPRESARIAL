@@ -290,7 +290,11 @@
 
 /* TABLETAS (600px a 1000px) */
 @media (min-width: 600px) and (max-width: 900px) {
-
+  html, body {
+    height: auto;
+    overflow-y: auto; /* permite desplazarse verticalmente */
+    overflow-x: hidden; /* evita el scroll lateral */
+}
   .container {
       gap: 10px; 
       padding: 3px;
