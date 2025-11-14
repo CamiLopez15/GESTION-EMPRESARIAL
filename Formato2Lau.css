@@ -290,29 +290,23 @@
 
 /* TABLETAS (600px a 1000px) */
 @media (min-width: 600px) and (max-width: 1000px) {
-  html, body {
-    height: auto;
-    overflow-y: auto; /* permite desplazarse verticalmente */
-    overflow-x: hidden; /* evita el scroll lateral */
-}
   .container {
       gap: 10px; 
       padding: 3px;
   }
 
   .video-section {
-      max-width: 80px;       /* Más pequeño */
+      max-width: 280px;       /* Más pequeño */
       padding: 10px 8px;
   }
 
   .video-container {
-      max-width: 520px;
+      max-width: 380px;
       margin: 0 auto;
   }
 
-  .video-container video {
-      width: 70%;             
-      max-height: 260px;      /* Más bajo */
+  .video-container video {          
+      max-height: 200px;      /* Más bajo */
       border-radius: 5px;
   }
 
