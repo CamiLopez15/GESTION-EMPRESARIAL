@@ -287,42 +287,73 @@
 
 /* TABLETAS (600px a 1000px) */
 @media (min-width: 600px) and (max-width: 900px) {
-  .video-section {
-    padding: 20px 15px;
-    width: 50%;
+  .container {
+      gap: 10px; 
+      padding: 3px;
   }
 
-  .container {
-    gap: 25px;
+  .video-section {
+      max-width: 180px;       /* Más pequeño */
+      padding: 10px 8px;
   }
 
   .video-container {
-    margin-bottom: 15px;
+      max-width: 180px;
+      margin: 0 auto;
   }
 
+  .video-container video {          
+      max-height: 100px;      /* Más bajo */
+      border-radius: 5px;
+  }
+
+  /* Caja de texto explicativo */
   .info-text-container {
-    padding: 15px;
-    margin-bottom: 15px;
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid #fb2576;
+    border-radius: 6px;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    min-height: 30px;        
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
+  .info-text {
+      font-size: 10px;
+      line-height: 1.2;
+      text-align: center;
+  }
+
+  /* Timer compacto */
+  .timer-display {
+      font-size: 13px;
+  }
+
+  .timer-text {
+      font-size: 10px;
+  }
+
+  /* Botones super compactos */
   .buttons-container {
-    width: 100%;
-    max-width: 100%;
-    align-items: center;
+      gap: 6px;
+      max-width: 100px;
   }
 
   .button {
-    width: 80%;
-    max-width: 80%;
+      width: 40%;
+      max-width: 40%;
   }
 
   .button a {
-    padding: 15px 30px;
-    font-size: 18px;
+      padding: 8px 15px;
+      font-size: 10x;
   }
 
   .button:after {
-    bottom: -10px;
+      bottom: -4px;
   }
 }
 
